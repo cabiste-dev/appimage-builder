@@ -41,7 +41,7 @@ AppDir:
     exclude: []
 
   after_bundle: |
-    # configure tools 
+    # configure tools
     ln -s fakeroot-sysv $TARGET_APPDIR/usr/bin/fakeroot
     ln -s bash $TARGET_APPDIR/bin/sh
 
@@ -50,7 +50,8 @@ AppDir:
     python3.8 -m pip install --ignore-installed --prefix=/usr --root="$TARGET_APPDIR"  install certifi
 
   runtime:
-    version: "continuous"
+  # idk what 'version' supposed to mean here but having the value as "continuous" gives an error
+    version: "{{APPIMAGE_BUILDER_VERSION}}"
     env:
       # Set python home
       # See https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME
@@ -83,4 +84,4 @@ AppImage:
   update-information: 'gh-releases-zsync|AppImageCrafters|appimage-builder|latest|-*x86_64.AppImage.zsync'
   sign-key: None
   arch: x86_64
-
+  comp: xz
