@@ -4,6 +4,9 @@
 # vscode
 .vscode/*
 
+# folder to export the binaries in
+releases
+
 # Example builds
 /recipes/*/AppDir
 /recipes/*/appimage-build
