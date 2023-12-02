@@ -12,7 +12,7 @@ echo "FINISHED DOWNLOADING PIPS"
 
 cd recipes/appimage-builder || exit
 
-export APPIMAGE_BUILDER_VERSION=v2.0.0
+export APPIMAGE_BUILDER_VERSION=v1.2.0
 python3 -m appimagebuilder
 
 mkdir release

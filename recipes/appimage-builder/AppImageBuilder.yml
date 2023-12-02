@@ -51,7 +51,7 @@ AppDir:
 
   runtime:
   # idk what 'version' supposed to mean here but having the value as "continuous" gives an error
-    version: "{{APPIMAGE_BUILDER_VERSION}}"
+    version: "v2.0.0"
     env:
       # Set python home
       # See https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME
